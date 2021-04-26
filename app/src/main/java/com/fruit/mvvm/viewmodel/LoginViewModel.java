@@ -14,6 +14,8 @@ import com.fruit.mvvm.ui.login.LoginResult;
 import com.fruit.mvvm.model.LoggedInUser;
 import com.fruit.mvvm.R;
 
+import cn.leancloud.AVException;
+
 public class LoginViewModel extends ViewModel {
 
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
@@ -32,7 +34,7 @@ public class LoginViewModel extends ViewModel {
         return loginResult;
     }
 
-    public void login(String username, String password) {
+    public void login(String username, String password) throws InterruptedException {
         // can be launched in a separate asynchronous job
         Result<LoggedInUser> result = loginRepository.login(username, password);
 

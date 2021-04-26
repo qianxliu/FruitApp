@@ -22,7 +22,8 @@
         <activity android:name=".ui.login.RegisterActivity" />
         <activity
             android:name=".ui.MineActivity"
-            android:label="@string/title_activity_mine" />
+            android:label="@string/title_activity_mine"
+            />
 
         <uses-library
             android:name="org.apache.http.legacy"

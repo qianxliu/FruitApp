@@ -1,6 +1,7 @@
 package com.fruit.mvvm.ui;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.fruit.mvvm.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,6 +18,9 @@ public class MineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mine);
+        String[] idName = getIntent().getStringArrayExtra("Detail");
+        Log.d("Detail", idName[0]);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

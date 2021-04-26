@@ -21,6 +21,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.fruit.mvvm.R;
+import com.fruit.mvvm.data.LoginRepository;
 import com.fruit.mvvm.ui.MineActivity;
 import com.fruit.mvvm.viewmodel.LoginViewModel;
 import com.fruit.mvvm.viewmodel.LoginViewModelFactory;
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -68,7 +70,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 loadingProgressBar.setVisibility(View.GONE);
                 if (loginResult.getError() != null) {
-
                     showLoginFailed(loginResult.getError());
                 }
                 if (loginResult.getSuccess() != null) {
@@ -104,8 +105,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    loginViewModel.login(usernameEditText.getText().toString(),
-                            passwordEditText.getText().toString());
+                    try {
+                        loginViewModel.login(usernameEditText.getText().toString(),
+                                passwordEditText.getText().toString());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
                 return false;
             }
@@ -119,7 +124,11 @@ public class LoginActivity extends AppCompatActivity {
                 String mobile = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-                loginViewModel.login(mobile, password);
+                try {
+                    loginViewModel.login(mobile, password);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
@@ -149,7 +158,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Intent intent = new Intent(LoginActivity.this, MineActivity.class);
         String[] strings = {model.getUserId(), model.getDisplayName()};
-        intent.putExtra("IdName", strings);
+        intent.putExtra("Detail", strings);
         startActivity(intent);
 
     }
