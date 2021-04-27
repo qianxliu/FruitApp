@@ -1,4 +1,4 @@
-package com.fruit.mvvm.ui.task;
+package com.fruit.mvvm.ui.home;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,29 +13,29 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fruit.mvvm.R;
-import com.fruit.mvvm.data.TaskDummyContent;
+import com.fruit.mvvm.data.OrderDummyContent;
 
 /**
  * A fragment representing a list of Items.
  */
-public class TaskFragment extends Fragment {
+public class OrderFragment extends Fragment {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
-    private int mColumnCount = 3;
+    private int mColumnCount = 1;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public TaskFragment() {
+    public OrderFragment() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static TaskFragment newInstance(int columnCount) {
-        TaskFragment fragment = new TaskFragment();
+    public static OrderFragment newInstance(int columnCount) {
+        OrderFragment fragment = new OrderFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
@@ -54,7 +54,7 @@ public class TaskFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_order_list, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -65,7 +65,7 @@ public class TaskFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyTaskRecyclerViewAdapter(TaskDummyContent.ITEMS));
+            recyclerView.setAdapter(new MyOrderRecyclerViewAdapter(OrderDummyContent.ITEMS));
         }
         return view;
     }

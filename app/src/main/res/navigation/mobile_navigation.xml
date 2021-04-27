@@ -7,15 +7,15 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.fruit.mvvm.ui.home.HomeFragment"
+        android:name="com.fruit.mvvm.ui.home.OrderFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_order_list" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.fruit.mvvm.ui.task.TaskFragment"
         android:label="@string/title_task"
-        tools:layout="@layout/fragment_task" />
+        tools:layout="@layout/fragment_item_list" />
 
     <fragment
         android:id="@+id/navigation_notifications"
