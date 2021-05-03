@@ -21,10 +21,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.fruit.mvvm.R;
-import com.fruit.mvvm.data.LoginRepository;
 import com.fruit.mvvm.ui.MineActivity;
-import com.fruit.mvvm.viewmodel.LoginViewModel;
-import com.fruit.mvvm.viewmodel.LoginViewModelFactory;
+import com.fruit.mvvm.viewmodels.login.LoginViewModel;
+import com.fruit.mvvm.viewmodels.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 

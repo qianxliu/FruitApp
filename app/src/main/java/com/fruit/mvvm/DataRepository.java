@@ -2,15 +2,13 @@ package com.fruit.mvvm;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
-import com.fruit.mvvm.db.AppDatabase;
-import com.fruit.mvvm.db.entity.CommentEntity;
-import com.fruit.mvvm.db.entity.ProductEntity;
 
 import java.util.List;
 
-/**
+/*
  * Repository handling the work with products and comments.
  */
+/*
 public class DataRepository {
 
     private static DataRepository sInstance;
@@ -44,6 +42,7 @@ public class DataRepository {
     /**
      * Get the list of products from the database and get notified when the data changes.
      */
+/*
     public LiveData<List<ProductEntity>> getProducts() {
         return mObservableProducts;
     }
@@ -60,3 +59,4 @@ public class DataRepository {
         return mDatabase.productDao().searchAllProducts(query);
     }
 }
+*/

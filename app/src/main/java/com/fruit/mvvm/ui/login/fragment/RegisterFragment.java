@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fruit.mvvm.R;
-import com.fruit.mvvm.viewmodel.RegisterViewModel;
+import com.fruit.mvvm.viewmodels.login.RegisterViewModel;
 
 public class RegisterFragment extends Fragment {
 

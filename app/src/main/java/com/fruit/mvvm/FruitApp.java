@@ -18,10 +18,7 @@ package com.fruit.mvvm;
 
 import android.app.Application;
 
-import com.fruit.mvvm.db.AppDatabase;
-
 import cn.leancloud.AVLogger;
-import cn.leancloud.AVUser;
 import cn.leancloud.core.AVOSCloud;
 
 /**
@@ -40,6 +37,7 @@ public class FruitApp extends Application {
         AVOSCloud.initialize("XUM443zwu6VrwqRvu3nnba5T-gzGzoHsz", "EwnGa8l7NzYhlCB62kIGonoE", "https://xum443zw.lc-cn-n1-shared.com");
     }
 
+    /*
     public AppDatabase getDatabase() {
         return AppDatabase.getInstance(this, mAppExecutors);
     }
@@ -47,4 +45,5 @@ public class FruitApp extends Application {
     public DataRepository getRepository() {
         return DataRepository.getInstance(getDatabase());
     }
+     */
 }

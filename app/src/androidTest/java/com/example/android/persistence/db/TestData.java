@@ -1,8 +1,5 @@
 package com.fruit.mvvm.db;
 
-import com.fruit.mvvm.db.entity.CommentEntity;
-import com.fruit.mvvm.db.entity.ProductEntity;
-
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;

@@ -29,7 +29,6 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.fruit.mvvm.LiveDataTestUtil;
 import com.fruit.mvvm.db.dao.ProductDao;
-import com.fruit.mvvm.db.entity.ProductEntity;
 
 import org.junit.After;
 import org.junit.Before;

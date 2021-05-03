@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fruit.mvvm.R;
-import com.fruit.mvvm.viewmodel.ForgetViewModel;
+import com.fruit.mvvm.viewmodels.login.ForgetViewModel;
 
 public class ForgetFragment extends Fragment {
 
@@ -27,7 +27,7 @@ public class ForgetFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.main_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_forget, container, false);
     }
 
     @Override
