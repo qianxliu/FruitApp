@@ -2,7 +2,7 @@ package com.fruit.mvvm.data;
 
 import android.util.Log;
 
-import com.fruit.mvvm.model.LoggedInUser;
+import com.fruit.mvvm.model.login.LoggedInUser;
 
 import org.jetbrains.annotations.NotNull;
 

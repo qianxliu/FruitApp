@@ -30,6 +30,7 @@ public class PersonalFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+
         super.onActivityCreated(savedInstanceState);
         String Detail[] = requireActivity().getIntent().getStringArrayExtra("Detail");
 

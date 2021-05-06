@@ -11,11 +11,12 @@ import com.fruit.mvvm.data.Result;
 import com.fruit.mvvm.ui.login.LoggedInUserView;
 import com.fruit.mvvm.ui.login.LoginFormState;
 import com.fruit.mvvm.ui.login.LoginResult;
-import com.fruit.mvvm.model.LoggedInUser;
+import com.fruit.mvvm.model.login.LoggedInUser;
 import com.fruit.mvvm.R;
 
 public class LoginViewModel extends ViewModel {
 
+    // must init, for no null point error
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
     private MutableLiveData<LoginResult> loginResult = new MutableLiveData<>();
     private LoginRepository loginRepository;

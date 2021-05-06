@@ -6,7 +6,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
+import android.widget.ViewSwitcher;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -43,6 +49,10 @@ public class PlantBaseFragment extends Fragment {
         return fragment;
     }
 
+
+    private Integer ListImage[] = {R.mipmap.v_view, R.mipmap.v_cab, R.mipmap.v_green_land, R.mipmap.v_land_1,
+            R.mipmap.v_land_2};
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +66,9 @@ public class PlantBaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.plant_base_fragment, container, false);
+
+
+
 
         View plant_list = view.findViewById(R.id.list);
         // Set the adapter

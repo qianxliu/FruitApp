@@ -11,7 +11,10 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/Theme.AppCompat.DayNight"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        >
 
         <TextView
             android:id="@+id/title"
@@ -21,14 +24,52 @@
             android:minHeight="?actionBarSize"
             android:padding="@dimen/appbar_padding"
             android:text="@string/plant_base"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
-
-        <ImageView
+            />
+        <ViewFlipper
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:autoStart="true"
+            android:inAnimation="@anim/nav_default_enter_anim"
+            android:outAnimation="@anim/nav_default_exit_anim"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/v_view"
+                android:layout_gravity="center_horizontal"
+                >
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/v_cab"
+                android:layout_gravity="center_horizontal">
+            </ImageView>
 
-        </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/v_green_land"
+                android:layout_gravity="center_horizontal">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/v_land_1"
+                android:layout_gravity="center_horizontal">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/v_land_2"
+                android:layout_gravity="center_horizontal">
+            </ImageView>
+        </ViewFlipper>
     </com.google.android.material.appbar.AppBarLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
@@ -36,7 +77,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:paddingStart="12dp"
-        android:paddingTop="24dp"
+        android:paddingTop="200dp"
         android:paddingEnd="12dp"
         android:paddingBottom="180dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
