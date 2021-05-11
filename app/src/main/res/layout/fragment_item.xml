@@ -11,7 +11,7 @@
         android:layout_height="60dp"
         android:contentDescription="@null"
         android:scaleType="centerCrop"
-        android:src="@mipmap/cutecat" />
+        android:src="@drawable/field2" />
 
     <TextView
         android:id="@+id/content"

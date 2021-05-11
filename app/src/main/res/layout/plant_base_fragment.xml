@@ -26,6 +26,7 @@
             android:text="@string/plant_base"
             />
         <ViewFlipper
+            android:id="@+id/view_flipper"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="16dp"
@@ -33,40 +34,6 @@
             android:inAnimation="@anim/nav_default_enter_anim"
             android:outAnimation="@anim/nav_default_exit_anim"
             >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/v_view"
-                android:layout_gravity="center_horizontal"
-                >
-            </ImageView>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/v_cab"
-                android:layout_gravity="center_horizontal">
-            </ImageView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/v_green_land"
-                android:layout_gravity="center_horizontal">
-            </ImageView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/v_land_1"
-                android:layout_gravity="center_horizontal">
-            </ImageView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/v_land_2"
-                android:layout_gravity="center_horizontal">
-            </ImageView>
         </ViewFlipper>
     </com.google.android.material.appbar.AppBarLayout>
 

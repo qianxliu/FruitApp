@@ -7,9 +7,9 @@
         android:title="@string/plant_base" />
 
     <item
-        android:id="@+id/navigation_minefruit"
+        android:id="@+id/navigation_map"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/my_fruit" />
+        android:title="@string/current_position" />
 
     <item
         android:id="@+id/navigation_personal"

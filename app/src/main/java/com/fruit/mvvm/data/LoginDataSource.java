@@ -40,10 +40,8 @@ public class LoginDataSource {
 
                     public void onError(@NotNull Throwable throwable) {
                         // 登录失败（可能是密码错误）
-
                         Log.getStackTraceString(throwable);
                         Log.d("错误", String.valueOf(throwable.hashCode()));
-
                     }
 
                     @Override
@@ -54,7 +52,10 @@ public class LoginDataSource {
         });
 
         au.start();
-        //wait the au to die.
+
+        //Waits for this thread to die.
+
+        //An invocation of this method behaves in exactly the same way as the invocation
         au.join();
 
         try {

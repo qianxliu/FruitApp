@@ -1,20 +1,28 @@
 package com.fruit.mvvm.viewmodels.login;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.text.Layout;
 import android.util.Patterns;
+import android.view.View;
 
 import com.fruit.mvvm.data.LoginRepository;
 import com.fruit.mvvm.data.Result;
 import com.fruit.mvvm.ui.login.LoggedInUserView;
+import com.fruit.mvvm.ui.login.LoginActivity;
 import com.fruit.mvvm.ui.login.LoginFormState;
 import com.fruit.mvvm.ui.login.LoginResult;
 import com.fruit.mvvm.model.login.LoggedInUser;
 import com.fruit.mvvm.R;
+import com.google.android.material.snackbar.Snackbar;
 
-public class LoginViewModel extends ViewModel {
+public class LoginViewModel extends ViewModel{
 
     // must init, for no null point error
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
@@ -71,4 +79,5 @@ public class LoginViewModel extends ViewModel {
     private boolean isPasswordValid(String password) {
         return password != null && password.trim().length() > 5;
     }
+
 }

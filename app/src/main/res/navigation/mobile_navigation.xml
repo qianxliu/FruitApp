@@ -10,17 +10,22 @@
         android:id="@id/navigation_plantbase"
         android:name="com.fruit.mvvm.ui.plantbase.PlantBaseFragment"
         android:label="@string/plant_base"
-        tools:layout="@layout/plant_base_fragment" />
+        tools:layout="@layout/plant_base_fragment"
+        >
+    </fragment>
 
     <fragment
-        android:id="@id/navigation_minefruit"
-        android:name="com.fruit.mvvm.ui.minefruit.CFruitFragment"
-        android:label="@string/my_fruit"
-        tools:layout="@layout/c_fruit_fragment" />
+        android:id="@id/navigation_map"
+        android:name="com.fruit.mvvm.ui.map.MapFragment"
+        android:label="@string/current_position"
+        tools:layout="@layout/fragment_map" >
+    </fragment>
 
     <fragment
         android:id="@id/navigation_personal"
         android:name="com.fruit.mvvm.ui.personal.PersonalFragment"
         android:label="@string/title_mine"
-        tools:layout="@layout/fragment_personal" />
+        tools:layout="@layout/fragment_personal" >
+    </fragment>
+
 </navigation>

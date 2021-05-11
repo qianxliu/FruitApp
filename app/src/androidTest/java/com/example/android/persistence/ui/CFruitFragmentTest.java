@@ -27,7 +27,6 @@ import androidx.test.rule.ActivityTestRule;
 import com.fruit.mvvm.AppExecutors;
 import com.fruit.mvvm.EspressoTestUtil;
 import com.fruit.mvvm.R;
-import com.fruit.mvvm.ui.minefruit.CFruitFragment;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;

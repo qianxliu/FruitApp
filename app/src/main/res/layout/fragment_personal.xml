@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fruit.mvvm.viewmodels.personal.PersonalViewModel" />
+    </data>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:contentDescription="@null"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/cutecat" />
+                        android:src="@drawable/qianxin" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -90,10 +97,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
+
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -101,75 +110,107 @@
                             android:textAlignment="center">
                         </com.google.android.material.textview.MaterialTextView>
                     </androidx.appcompat.widget.LinearLayoutCompat>
+
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/darker_gray" />
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/money"
-                        android:textAlignment="center" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/darker_gray" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/money"
+                            android:textAlignment="center" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
                     android:layout_marginTop="16dp"
-                    android:layout_height="1dp"
-                    android:layout_width="match_parent"
                     android:background="@android:color/darker_gray" />
 
-
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/settings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/personal_information"
                     android:layout_margin="16dp"
-                    >
-                </com.google.android.material.textview.MaterialTextView>
-
-
-                <View
-
-                    android:layout_height="1dp"
-                    android:layout_width="match_parent"
-                    android:background="@android:color/darker_gray" />
-
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cart_address"
-                    android:layout_margin="16dp"
-                    >
-                </com.google.android.material.textview.MaterialTextView>
-
-
-
-                <View
-                    android:layout_height="1dp"
-                    android:layout_width="match_parent"
-                    android:background="@android:color/darker_gray" />
-
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/contact_service"
-                    android:layout_margin="16dp"
+                    android:text="@string/app_settings"
                     >
                 </com.google.android.material.textview.MaterialTextView>
 
                 <View
-                    android:layout_height="1dp"
                     android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/personal_information">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/cart_address">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/contact_service">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/request_permission"
+                    >
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
                     android:background="@android:color/darker_gray" />
 
 
