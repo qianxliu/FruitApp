@@ -151,6 +151,36 @@
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray" />
 
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/permission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/request_permission"
+                    >
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/license"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/open_license"
+                    >
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/information"
@@ -193,25 +223,12 @@
 
                 </com.google.android.material.textview.MaterialTextView>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/permission"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="@string/request_permission"
-                    >
-
-                </com.google.android.material.textview.MaterialTextView>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray" />
+
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>

@@ -80,7 +80,6 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
-
     implementation 'cn.leancloud:storage-android:7.2.3'
 
     implementation "androidx.appcompat:appcompat:1.2.0"
@@ -98,6 +97,10 @@ dependencies {
     implementation 'com.amap.api:search:latest.integration'
     implementation 'com.amap.api:location:latest.integration'
     implementation 'androidx.preference:preference:1.1.1'
+
+    // License
+    implementation "com.google.android.gms:play-services-oss-licenses:17.0.0"
+
 
     androidTestImplementation "androidx.appcompat:appcompat:1.2.0"
     androidTestImplementation "com.google.android.material:material:1.2.1"

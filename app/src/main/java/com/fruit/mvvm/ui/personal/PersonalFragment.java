@@ -20,6 +20,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.fruit.mvvm.R;
 import com.fruit.mvvm.ui.settings.SettingsActivity;
 import com.fruit.mvvm.viewmodels.personal.PersonalViewModel;
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 
 public class PersonalFragment extends Fragment {
 
@@ -59,6 +60,45 @@ public class PersonalFragment extends Fragment {
                     startActivity(intent);
                 }
         );
+        requireView().findViewById(R.id.license).setOnClickListener(
+                v -> {
+
+                    OssLicensesMenuActivity.setActivityTitle("开源许可");
+                    startActivity(new Intent(requireActivity(), OssLicensesMenuActivity.class));
+                }
+        );
+
+        requireView().findViewById(R.id.license).setOnClickListener(
+                v -> {
+
+                    OssLicensesMenuActivity.setActivityTitle("开源许可");
+                    startActivity(new Intent(requireActivity(), OssLicensesMenuActivity.class));
+                }
+        );
+
+        requireView().findViewById(R.id.information).setOnClickListener(
+                v -> {
+                    newDialog();
+                }
+        );
+
+        requireView().findViewById(R.id.address).setOnClickListener(
+                v -> {
+                    newDialog();
+                }
+        );
+        requireView().findViewById(R.id.contact).setOnClickListener(
+                v -> {
+                    newDialog();
+                }
+        );
+        requireView().findViewById(R.id.license).setOnClickListener(
+                v -> {
+
+                    OssLicensesMenuActivity.setActivityTitle("开源许可");
+                    startActivity(new Intent(requireActivity(), OssLicensesMenuActivity.class));
+                }
+        );
 
 
         // TODO: Use the ViewModel
@@ -74,6 +114,20 @@ public class PersonalFragment extends Fragment {
             }
         });
          */
+    }
+
+    public void newDialog() {
+        new AlertDialog.Builder(requireContext()).setTitle("正在开发中！").setPositiveButton("我需要这个功能!", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getContext(), "会做的", Toast.LENGTH_LONG).show();
+            }
+        }).setNegativeButton("不需要这个功能", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(requireActivity(), "还是会做的", Toast.LENGTH_SHORT).show();
+            }
+        }).show();
     }
 
 
